@@ -1,82 +1,83 @@
-# Task 5 File Handling Program
+# Circle Perimeter and Area Calculator
 
 ## Overview
 
-The **Task 5 File Handling Program** is a C++ application designed to handle circuit analysis by calculating and storing load voltage, load current, and load power values for various load resistances. The results are saved in text files for future reference and analysis.
+The **Circle Perimeter and Area Calculator** is a simple C++ program that calculates the perimeter and area of a circle based on user input. The program provides an interactive menu for users to select the type of calculation they wish to perform.
 
 ## Features
 
-- **Circuit Element Input:**
-  - Users can input supply voltage (E) and series resistor (R).
-- **Load Voltage Calculation:**
-  - Calculates the load voltage for different resistance values and stores the results in a file.
-- **Load Current and Power Calculation:**
-  - Computes the load current and power for different resistances and logs them into another file.
-- **File Handling:**
-  - Outputs results in a well-structured tabular format to `file1.txt` and `file2.txt`.
-- **User-Friendly Menu:**
-  - Provides an interactive menu with options to enter circuit values, perform calculations, and exit.
+- **User Input:**
+  - Allows users to input the radius of the circle.
+- **Calculation Options:**
+  - Provides two options:
+    - Calculate the perimeter of the circle.
+    - Calculate the area of the circle.
+- **Error Handling:**
+  - Displays an exit message if an invalid choice is entered.
 
 ## How to Run the Program
 
 1. **Compile the program:**
 
    ```bash
-   g++ Task5_FileHandling.cpp -o circuit_calculator
+   g++ Task_B.cpp -o circle_calculator
    ```
 
 2. **Run the executable:**
 
    ```bash
-   ./circuit_calculator
+   ./circle_calculator
    ```
 
-3. **Follow the on-screen menu options:**
+3. **Follow the on-screen instructions:**
 
-   - Enter circuit parameters.
-   - Perform calculations.
-   - View results stored in output files.
+   - Enter the radius value.
+   - Choose an option to calculate the perimeter or area.
 
-## Menu Options
+## Sample Input/Output
 
-1. Enter circuit element values (supply voltage, series resistor).
-2. Calculate and store load voltage values.
-3. Calculate and store load current and power values.
-4. Exit the program.
-
-## Input Validations
-
-- Ensures numerical inputs for voltage, resistance, and current.
-- Checks for correct file operations and handles errors appropriately.
-- Prevents invalid input by using input validation loops.
-
-## Sample Output
-
-Example file content after calculations:
+**Example Input:**
 
 ```
----------------------------------------
-Load Resistance RL	Voltage Vrl
----------------------------------------
-10			5.45
-20			6.78
----------------------------------------
+Enter the radius value of a circle: 10
+
+Choose your choice of calculation out of the following options:
+A: Calculate the Perimeter of the circle.
+B: Calculate the Area of the circle.
+Please only type A or B then press ENTER
+A
 ```
+
+**Example Output:**
+
+```
+The Perimeter of the circle is: 62.8
+```
+
+## Formulae Used
+
+- **Perimeter of a Circle:**
+  ```
+  Perimeter = 2 * π * radius
+  ```
+- **Area of a Circle:**
+  ```
+  Area = π * radius^2
+  ```
 
 ## Technologies Used
 
 - C++
-- File Handling (`fstream`)
-- Mathematical Operations (`math.h`)
 - Standard I/O (`iostream`)
+- Mathematical functions (`math.h`)
 
 ## Future Improvements
 
-- Add error logging for better debugging.
-- Introduce graphical user interface (GUI) for better visualization.
-- Implement database storage for better data management.
+- Add input validation for non-numeric entries.
+- Provide additional geometric calculations.
+- Allow the user to perform multiple calculations in a single session.
 
 ---
 
-Thank you for using the Task 5 File Handling Program!
+Thank you for using the Circle Perimeter and Area Calculator!
 
